@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">Table.dbo</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="OrderHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="OrderId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CustomerId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OrderNumber" nillable="true">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="OrderDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OrderTotal" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderHeader" nillable="true" type="ns3:OrderHeader" />
+  <xs:complexType name="ArrayOfOrderHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderHeader" type="ns3:OrderHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderHeader" nillable="true" type="ns3:ArrayOfOrderHeader" />
+  <xs:complexType name="OrderLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="OrderLineId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OrderId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProductId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Quantity" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Amount" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalAmount" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderLine" nillable="true" type="ns3:OrderLine" />
+  <xs:complexType name="ArrayOfOrderLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderLine" type="ns3:OrderLine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderLine" nillable="true" type="ns3:ArrayOfOrderLine" />
+</xs:schema>
