@@ -7,6 +7,13 @@ Project("{8727FEA9-91DB-4FB1-952D-E73D021F4F57}") = "BizTalkScratch", "BizTalkSc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BizTalkScratchProject", "BizTalkScratchProject\BizTalkScratchProject.btproj", "{75FBC711-67B3-4F03-A258-D30B1AD9CED3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleFiles", "SampleFiles", "{48719B5C-6139-4A53-B4C1-A74306C34360}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\BizTalk2020Demo\OrderManagement.sql = ..\..\..\..\Desktop\BizTalk2020Demo\OrderManagement.sql
+		..\..\..\..\..\..\BizTalk\PurchaseOrder\Sample\PurchasOrderSample.xml = ..\..\..\..\..\..\BizTalk\PurchaseOrder\Sample\PurchasOrderSample.xml
+		..\..\..\..\Desktop\BizTalk2020Demo\SELECT OrderManagement.sql = ..\..\..\..\Desktop\BizTalk2020Demo\SELECT OrderManagement.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
