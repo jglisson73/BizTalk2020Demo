@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BizTalkScratchProject", "Bi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SampleFiles", "SampleFiles", "{48719B5C-6139-4A53-B4C1-A74306C34360}"
 	ProjectSection(SolutionItems) = preProject
+		BizTalkScratchProject\BizTalk2020Demo.postman_collection.json = BizTalkScratchProject\BizTalk2020Demo.postman_collection.json
 		..\..\..\..\Desktop\BizTalk2020Demo\OrderManagement.sql = ..\..\..\..\Desktop\BizTalk2020Demo\OrderManagement.sql
 		..\..\..\..\..\..\BizTalk\PurchaseOrder\Sample\PurchasOrderSample.xml = ..\..\..\..\..\..\BizTalk\PurchaseOrder\Sample\PurchasOrderSample.xml
 		..\..\..\..\Desktop\BizTalk2020Demo\SELECT OrderManagement.sql = ..\..\..\..\Desktop\BizTalk2020Demo\SELECT OrderManagement.sql

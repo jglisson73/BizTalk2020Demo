@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "d387bdfc-9ccd-44f5-9d85-d17cd643ec10",
+		"name": "BizTalk2020Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:7071/api/IngestFile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/IngestFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"IngestFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://azurefunctiondemo20200307085523.azurewebsites.net",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<ns0:PurchaseOrder xmlns:ns0=\"http://BizTalkScratchProject.PurchaseOrder\">\r\n\t<CustomerNumber>12345</CustomerNumber>\r\n\t<PONumber>PO-8675309</PONumber>\r\n\t<OrderDate>2020-02-28</OrderDate>\r\n\t<OrderLine>\r\n\t\t<ProductNumber>PR01</ProductNumber>\r\n\t\t<Quantity>12</Quantity>\r\n\t\t<Amount>5.50</Amount>\r\n\t</OrderLine>\r\n\t<OrderLine>\r\n\t\t<ProductNumber>PR02</ProductNumber>\r\n\t\t<Quantity>2</Quantity>\r\n\t\t<Amount>9.99</Amount>\r\n\t</OrderLine>\r\n</ns0:PurchaseOrder>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://azurefunctiondemo20200307085523.azurewebsites.net/api/IngestFile?code=2H2GnvtAliu/r1rdV3Md9CsRYWesTeC9qJ95D2cRwRjb1cSLLgXxfA==",
+					"protocol": "https",
+					"host": [
+						"azurefunctiondemo20200307085523",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"IngestFile"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "2H2GnvtAliu/r1rdV3Md9CsRYWesTeC9qJ95D2cRwRjb1cSLLgXxfA=="
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
